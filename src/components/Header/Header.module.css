@@ -1,0 +1,47 @@
+a{
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: ghostwhite;
+}
+
+
+.login{
+    background: black;
+    border-radius: 20px;
+    border: solid;
+    padding: 15px;
+    color: white;
+}
+
+.pesquisa{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+.pesquisaInput{
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+    background-color: #f9fafb;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pesquisa-input:focus{
+    border-color: #001f3f;
+    background-color: white;
+}
