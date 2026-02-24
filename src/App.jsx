@@ -10,7 +10,7 @@ export default function App(){
         <>
             <Header />
             <Hero />
-            <main style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', paddingBottom: '96px' }}>
+            <main className="container pb-5 mb-5" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', paddingBottom: '96px' }}>
                 <Destaques />
                 <BookGrid />
             </main>

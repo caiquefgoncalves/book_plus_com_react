@@ -1,11 +1,11 @@
-.heroSecao{
+.heroSecao {
     position: relative;
-    height: 560px;
+    min-height: 560px;
     width: 100%;
     overflow: hidden;
 }
 
-.heroImagem{
+.heroImagem {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -13,10 +13,10 @@
     object-fit: cover;
 }
 
-.heroOverlay{
+.heroOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0,31,63,0.9)0%, rgba(0,31,63,0.4)50%, rgba(0,31,63,0)100%);
+    background: linear-gradient(to right, rgba(0,31,63,0.9) 0%, rgba(0,31,63,0.4) 50%, rgba(0,31,63,0) 100%);
 }
 
 .heroConteudo{
@@ -44,6 +44,8 @@
     letter-spacing: 0.3em;
     margin-bottom: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    color:#f3f4f6;
+
 }
 
 .heroTitulo{
@@ -55,10 +57,10 @@
 }
 
 
-.heroTituloGradiente{
+.heroTituloGradiente {
     color: transparent;
     background-clip: text;
-    -webkit-background-clip: text ;
+    -webkit-background-clip: text;
     background-image: linear-gradient(to right, white, #9ca3af);
 }
 
@@ -70,7 +72,7 @@
     margin-bottom: 24px;
 }
 
-.botaoPrimario{
+.botaoPrimario {
     background-color: white;
     color: #001f3f;
     padding: 16px 32px;
@@ -84,7 +86,7 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.botaoSecundario{
+.botaoSecundario {
     background-color: transparent;
     color: #f3f4f6;
     padding: 16px 32px;
@@ -99,12 +101,12 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.botaoSecundario:hover{
-    background-color: transparent;
+.botaoSecundario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-4px);
 }
 
-.botaoPrimario:hover{
+.botaoPrimario:hover {
     background-color: #f3f4f6;
     transform: translateY(-4px);
 }

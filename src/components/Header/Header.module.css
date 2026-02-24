@@ -1,38 +1,40 @@
-a{
-    margin: 20px;
+.cabecalho {
+    background-color: ghostwhite;
+    padding: 15px 20px;
+}
+
+.link {
     text-decoration: none;
     color: black;
+    font-weight: 500;
 
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: ghostwhite;
-}
-
-
-.login{
+.login {
     background: black;
     border-radius: 20px;
-    border: solid;
-    padding: 15px;
+    border: solid 2px black;
+    padding: 10px 20px;
     color: white;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
-.pesquisa{
-    display: flex;
-    align-items: center;
+.login:hover {
+    background: transparent;
+    color: black;
+}
+
+.pesquisa {
     position: relative;
-    flex: 1;
+    width: 100%;
+    min-width: 250px;
     max-width: 500px;
 }
 
-.pesquisaInput{
+.pesquisaInput {
     width: 100%;
-    padding: 12px 15px 12px 45px;
+    padding: 12px 15px 12px 20px;
     border: 1px solid #e5e7eb;
     border-radius: 9999px;
     background-color: #f9fafb;
@@ -41,7 +43,8 @@ header{
     transition: all 0.3s ease;
 }
 
-.pesquisa-input:focus{
+
+.pesquisaInput:focus {
     border-color: #001f3f;
     background-color: white;
 }

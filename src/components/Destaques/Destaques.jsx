@@ -2,18 +2,25 @@ import css from './Destaques.module.css';
 
 export default function Destaques(){
     return (
-        <div className={css.secaoTituloContainer}>
-            <div className={css.grupoTexto}>
-                <div className={css.subtitulo}>
+
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-end my-5 gap-4">
+
+
+            <div className="d-flex flex-column gap-2">
+
+
+                <div className="d-flex align-items-center gap-3">
                     <div className={css.linha}></div>
-                    <span className={css.subtitulo2}>Novidades</span>
+                    <span className={`${css.subtitulo2} fs-6`}>Novidades</span>
                 </div>
-                <h2 className={css.tituloPrincipal}>Destaques da Semana</h2>
+
+
+                <h2 className={`${css.tituloPrincipal} display-6 m-0`}>Destaques da Semana</h2>
+
             </div>
 
-            <div className={css.filtros}>
 
-
+            <div className="d-flex gap-3 align-items-center">
                 <select className={css.ordernar}>
                     <option>Ordernar por: Relevância</option>
                     <option>Mais Recente</option>
@@ -21,10 +28,6 @@ export default function Destaques(){
                 </select>
             </div>
 
-
         </div>
-
-
-
     )
 }

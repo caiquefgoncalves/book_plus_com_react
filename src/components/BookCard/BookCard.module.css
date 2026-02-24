@@ -1,25 +1,23 @@
-.cartaoLivro{
+.cartaoLivro {
     display: flex;
     flex-direction: column;
     gap: 20px;
     cursor: pointer;
+    border-radius: 12px;
 }
 
-.imagemContainer{
+.imagemContainer {
     position: relative;
     overflow: hidden;
     aspect-ratio: 2 / 3;
     background-color: #f3f4f6;
     border-radius: 12px;
-    box-shadow:  0 4px 6px -1px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 
-cartaoLivro:hover{
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-}
 
-.imagem{
+
+.imagem {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -27,8 +25,8 @@ cartaoLivro:hover{
     transition: transform 0.7s ease;
 }
 
-.cartaoLivro:hover .imagem{
-    transform: scale(1.1)
+.cartaoLivro:hover .imagem {
+    transform: scale(1.1);
 }
 
 .overlay{
