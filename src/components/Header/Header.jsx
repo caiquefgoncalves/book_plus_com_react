@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import {Link} from "react-router-dom";
 import css from './Header.module.css';
+
 
 export default function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -35,13 +37,11 @@ export default function Header() {
 
 
                     <nav className="d-flex flex-column flex-lg-row align-items-center gap-4 text-nowrap">
-                        <a href="#" className={css.link}>Catálogo</a>
+                        <Link to={'/catalogo'} className={css.link}>Catálogo</Link>
                         <a href="#" className={css.link}>Lançamentos</a>
                         <a href="#" className={css.link}>Mais Vendidos</a>
 
-                        <button className={`${css.login} px-4`} type="button">
-                            Login Admin
-                        </button>
+                        <Link className={`${css.login} px-4`} to={'/login'}>Login</Link>
                     </nav>
 
                 </div>
