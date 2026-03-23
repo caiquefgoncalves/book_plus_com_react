@@ -2,6 +2,7 @@ import { useState } from 'react';
 import css from '../components/Login/Login.module.css';
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import {Link} from "react-router-dom";
 
 
 export default function Login() {
@@ -16,6 +17,12 @@ export default function Login() {
             <Header />
             <div className={css.loginFundo}>
                 <div className={css.cartao}>
+                    <div className="mb-4 text-center">
+                        <h1 className={css.logo}>LOGAR CONTA</h1>
+                        <p className="text-muted mt-2" style={{ fontSize: '14px' }}>
+                            Junte-se novamente à Book Plus
+                        </p>
+                    </div>
 
 
 
@@ -50,6 +57,9 @@ export default function Login() {
                         </button>
 
                     </form>
+                    <div className="mt-3 text-center" style={{fontSize: '14px'}}>
+                        Não possui uma conta? <Link to="/cadastro" style={{color: '#001f3f', fontWeight: 'bold'}}>Faça Cadastro</Link>
+                    </div>
 
                 </div>
             </div>

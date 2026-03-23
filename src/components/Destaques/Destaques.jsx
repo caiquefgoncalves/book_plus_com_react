@@ -19,15 +19,6 @@ export default function Destaques(){
 
             </div>
 
-
-            <div className="d-flex gap-3 align-items-center">
-                <select className={css.ordernar}>
-                    <option>Ordernar por: Relevância</option>
-                    <option>Mais Recente</option>
-                    <option>Menor preço</option>
-                </select>
-            </div>
-
         </div>
     )
 }
