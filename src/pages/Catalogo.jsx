@@ -79,7 +79,7 @@ export default function Catalogo() {
             <Header />
 
             <main className="container py-5 flex-grow-1" style={{ maxWidth: '1280px' }}>
-                <h2 className="mb-4" style={{color: '#001f3f', fontWeight: '800'}}>Catálogo Completo</h2>
+                <h2 className="mb-4" style={{color: '#001f3f', fontWeight: '800'}}>Catálogo</h2>
 
 
                 <section className="bg-white p-4 rounded shadow-sm mb-5">
