@@ -1,4 +1,5 @@
 import css from './Hero.module.css';
+import {Link} from "react-router-dom";
 
 export default function Hero() {
     return (
@@ -39,9 +40,7 @@ export default function Hero() {
 
 
                     <div className="d-flex flex-wrap gap-3 mt-2">
-                        <a href="#catalogo" className={css.botaoPrimario}>
-                            Explorar Catálogo
-                        </a>
+                        <Link to={'/catalogo'} className={css.botaoPrimario}>Catálogo</Link>
                         <a href="#promocoes" className={css.botaoSecundario}>
                             Ver Promoções
                         </a>

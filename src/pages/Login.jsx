@@ -19,11 +19,10 @@ export default function Login() {
         }
     }, []);
 
-    async function realizarLogin(e) {
-        e.preventDefault();
-        setAlerta('Aguarde, a entrar...');
+    async function realizarLogin() {
 
-        try {
+
+
             let retorno = await fetch('https://apps-api-livros.ucxocw.easypanel.host/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -41,9 +40,6 @@ export default function Login() {
             } else {
                 setAlerta("E-mail ou senha incorretos!");
             }
-        } catch (erro) {
-            setAlerta("Erro ao tentar conectar com o servidor.");
-        }
     }
 
     return (
