@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header/Header.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import Destaques from "../components/Destaques/Destaques.jsx";
@@ -33,7 +34,6 @@ export default function Home() {
 
             var dadosDaApi = await resposta.json();
 
-            // Tratando a resposta da API para extrair a lista corretamente
             let listaProntaParaTela = [];
 
             if (Array.isArray(dadosDaApi)) {
@@ -48,31 +48,29 @@ export default function Home() {
                 listaProntaParaTela = [dadosDaApi];
             }
 
-            // Atualiza a tela com todos os livros (ao abrir) ou com o filtro (ao pesquisar)
             setLivros(listaProntaParaTela);
 
         } catch (erro) {
-            console.error("Erro na busca:", erro);
+            console.error(erro);
         }
     }
 
-    // Carrega TODOS os livros assim que o usuário acessa a página
     useEffect(() => {
         buscarLivros();
     }, []);
 
     return (
-        <>
+        <div className="d-flex flex-column min-vh-100 bg-light">
             <Header />
             <Hero />
 
-            <main className="container pb-5 mb-5" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', paddingBottom: '96px' }}>
+            <main className="container pb-5 mb-5 flex-grow-1" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', paddingBottom: '96px' }}>
                 <Destaques />
 
                 <section className="mt-5 mb-5 pt-4 border-top">
-                    <h2 className="mb-4" style={{color: '#001f3f', fontWeight: '800'}}>Busca Rápida</h2>
+                    <h2 className="mb-4" style={{color: '#001f3f', fontWeight: '800'}}>Filtro</h2>
 
-                    <div className="row g-3 mb-5 align-items-end">
+                    <div className="row g-3 mb-5 align-items-end p-4 bg-white shadow-sm rounded border">
                         <div className="col-12 col-md-5">
                             <label className="form-label fw-bold" style={{fontSize: '11px', color: '#6b7280', letterSpacing: '0.05em'}}>PESQUISAR POR TÍTULO</label>
                             <input
@@ -108,7 +106,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* LISTAGEM DOS LIVROS (Sem caixas de erro de desenvolvedor) */}
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 gy-5">
                         {livros && livros.length > 0 ? (
                             livros.map((livro, index) => (
@@ -131,9 +128,17 @@ export default function Home() {
                                             <h5 className="card-title fw-bold" style={{ color: '#001f3f', fontSize: '1.1rem' }}>
                                                 {livro.titulo || "Sem Título"}
                                             </h5>
-                                            <p className="card-text text-muted mb-0" style={{ fontSize: '0.9rem' }}>
+                                            <p className="card-text text-muted mb-3" style={{ fontSize: '0.9rem' }}>
                                                 {livro.autor || "Autor Desconhecido"}
                                             </p>
+
+                                            <Link
+                                                to={`/livro/${livro.id}`}
+                                                className="btn mt-auto text-white fw-bold w-100"
+                                                style={{backgroundColor: '#001f3f', borderRadius: '8px'}}
+                                            >
+                                                Ver Detalhes
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -145,10 +150,9 @@ export default function Home() {
                         )}
                     </div>
                 </section>
-
             </main>
 
             <Footer />
-        </>
+        </div>
     );
 }
